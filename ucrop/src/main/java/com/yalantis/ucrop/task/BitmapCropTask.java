@@ -28,6 +28,7 @@ import com.yalantis.ucrop.callback.BitmapCropCallback;
 import com.yalantis.ucrop.model.CropParameters;
 import com.yalantis.ucrop.model.ExifInfo;
 import com.yalantis.ucrop.model.ImageState;
+import com.yalantis.ucrop.util.BitmapLoadUtils;
 import com.yalantis.ucrop.util.ColorFilterGenerator;
 import com.yalantis.ucrop.util.FileUtils;
 import com.yalantis.ucrop.util.ImageHeaderParser;
@@ -38,7 +39,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.lang.ref.WeakReference;
+
 
 
 /**
@@ -241,7 +242,7 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
     
 
     private void saveImage(@NonNull Bitmap croppedBitmap) throws FileNotFoundException {
-        Context context = mContext.get();
+        Context context = mContext;
         if (context == null) {
             return;
         }
