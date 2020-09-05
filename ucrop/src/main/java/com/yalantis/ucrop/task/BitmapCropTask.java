@@ -53,9 +53,6 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
 
     private static final String TAG = "BitmapCropTask";
 
-    static {
-        System.loadLibrary("ucrop");
-    }
 
     private Context mContext;
     private Bitmap mViewBitmap;
