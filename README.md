@@ -1,17 +1,12 @@
-# uCrop - Image Cropping Library for Android
+## uCrop'n'Edit - Image Cropping + Editing Library for Android
 
-#### This project aims to provide an ultimate and flexible image cropping experience. Made in [Yalantis](https://yalantis.com/?utm_source=github)
+#### Using the source code of "<a href="https://github.com/Yalantis/uCrop">uCrop</a>", I’ve added four new features - ability to change Brightness, Contrast, Saturation and Sharpness.
 
-#### [How We Created uCrop](https://yalantis.com/blog/how-we-created-ucrop-our-own-image-cropping-library-for-android/)
-#### Check this [project on Dribbble](https://dribbble.com/shots/2484752-uCrop-Image-Cropping-Library)
+<p align="center" style="background-color:#ededed">
+  <img src="preview.gif" width="320" height="560">
+</p>
 
-<img src="preview.gif" width="800" height="600">
-
-# Usage
-
-*For a working implementation, please have a look at the Sample Project - sample*
-
-<a href="https://play.google.com/store/apps/details?id=com.yalantis.ucrop.sample&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="185" height="70"/></a>
+## Usage
 
 1. Include the library as local library project.
 
@@ -23,6 +18,7 @@
 	   }
 	}
 	```
+
 
     ``` implementation 'com.github.yalantis:ucrop:2.2.3' ``` - lightweight general solution 
     
@@ -106,72 +102,44 @@ Currently you can change:
 
 ### Version: 2.2.1
 
-  * Fix including [#285](https://github.com/Yalantis/uCrop/issues/285)
+    ``` implementation 'com.github.krokyze:ucropnedit:2.2.6' ```
+    
+2. To use uCrop’n’Edit, you can follow the exact same methods as for uCrop: <a href="https://github.com/Yalantis/uCrop#usage">Usage</a>
 
-### Version: 2.2
+If you have any interesting ideas for uCrop’n’Edit do not be afraid to let me know. You can easily leave a request and I will be happy to take a look at the viability of your proposal. I’ll be more than happy to try and add some new features to the library, if I think they can make it even better!
 
-  * Several fixes including [#121](https://github.com/Yalantis/uCrop/issues/121), [#173](https://github.com/Yalantis/uCrop/issues/173), [#184](https://github.com/Yalantis/uCrop/issues/184) and more!
-  * New APIs introduced [#149](https://github.com/Yalantis/uCrop/issues/149), [#186](https://github.com/Yalantis/uCrop/issues/186) and [#156](https://github.com/Yalantis/uCrop/issues/156)
 
-### Version: 2.1
+#### Please keep in mind that most of the work is developed by Yalantis, so if you find any bugs that’s not related to brightness, contrast, saturation or sharpness, you should add a new issue to their <a href="https://github.com/Yalantis/uCrop/issues">Github page</a> and as they will push update, I will pull it to make sure everything works as best as it can.
 
-  * Fixes issue with EXIF data (images taken on front camera with Samsung devices mostly) [#130](https://github.com/Yalantis/uCrop/issues/130) [#111](https://github.com/Yalantis/uCrop/issues/111)
-  * Added API to set custom set of aspect ratio options for user. [#131](https://github.com/Yalantis/uCrop/issues/131)
-  * Added API to set all configs via UCrop.Options class. [#126](https://github.com/Yalantis/uCrop/issues/126)
-  * Added ABI x86_64 support. [#105](https://github.com/Yalantis/uCrop/issues/105)
+Massive thanks to guys from Yalantis for open sourcing this great library!
 
-### Version: 2.0
+## Changelog (<a href="https://github.com/Yalantis/uCrop#changelog">uCrop Changelog</a>)
 
-  * Native image crop (able to crop high-resolution images, e.g. 16MP & 32MP images on Nexus 5X).
-  * WebP compression format is not supported at the moment (choose JPEG or PNG).
-  * Now library copies EXIF data to cropped image (size and orientation are updated).
-  
-### Version: 1.5
+### Version 2.2.6 (based on uCrop 2.2.6)
 
-  * Introduced "Freestyle" crop (you can resize crop rectangle by dragging it corners) [#32](https://github.com/Yalantis/uCrop/issues/32)
-  * Now image & crop view paddings are not associated [#68](https://github.com/Yalantis/uCrop/issues/68)
-  * Updated API
+  * Merged new version from uCrop.
 
-### Version: 1.4
+### Version 2.2.5 (based on uCrop 2.2.4)
 
-  * Introduced http(s) Uri support!
-  * Image is cropped in background thread.
-  * Showing loader while Bitmap is processed (both loading and cropping).
-  * Several bug fixes.
-  * Couple new things to configure.
-  * Updated minSdkVersion to Android ICS 4.0 (no reason to support couple percents of old phones).
+  * Merged new version from uCrop.
 
-### Version: 1.3
+### Version 2.2.4 (based on uCrop 2.2.3)
 
-  * Image is loaded in background thread. Better error-handling for image decoding.
-  * Improved EXIF data support (rotation and mirror).
-  * Small UI updates.
-  * Couple new things to configure.
-  
-  * Sample updated with possibility to choose custom aspect ratio.
+  * Merged new version from uCrop.
 
-### Version: 1.2
+### Version 2.2.3 (based on uCrop 2.2.2)
 
-  * Updated core logic so an image corrects its position smoothly and obviously.
+  * Merged new version from uCrop.
 
-### Version: 1.1
+### Version 2.2.2 (based on uCrop 2.2.1)
 
-  * UCrop builder was updated and now UCrop.Options class has even more values to setup.
+  * Saturation feature
+  * Sharpness feature (supported for devices with >= API 17)
 
-### Version: 1.0
+### Version: 2.2.1
 
-  * Initial Build
-
-### Let us know!
-
-We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the library. 
-
-#### Apps using uCrop
-
-- [Thirty](https://play.google.com/store/apps/details?id=com.twominds.thirty).
-- [Light Smart HD](https://play.google.com/store/apps/details?id=com.SmartCamera.simple).
-- [BCReader](https://play.google.com/store/apps/details?id=com.iac.bcreader).
-- [Xprezia: Share Your Passion](https://play.google.com/store/apps/details?id=com.xprezzia.cnj).
+  * Brightness feature
+  * Contrast feature
 
 ## License
 

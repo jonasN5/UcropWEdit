@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply from: '../mavenpush.gradle'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 28
@@ -8,15 +8,20 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 25
-        versionName "2.2.5-non-native"
+        versionCode 26
+        versionName "2.2.6-non-native"
+
 
         vectorDrawables.useSupportLibrary = true
+
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-consumer-rules.pro'
         }
     }
     compileOptions {
@@ -29,11 +34,20 @@ android {
 
     resourcePrefix 'ucrop_'
 
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+
 }
 
 dependencies {
-    implementation "androidx.appcompat:appcompat:${androidx_appcompat_version}"
-    implementation "androidx.exifinterface:exifinterface:${androidx_exifinterface_version}"
-    implementation "androidx.transition:transition:${androidx_transition_version}"
-    implementation "com.squareup.okhttp3:okhttp:3.12.1"
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.exifinterface:exifinterface:1.1.0'
+    implementation 'androidx.transition:transition:1.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
+apply from: 'publish.gradle'
+

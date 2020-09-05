@@ -254,4 +254,6 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, BitmapLoadTask.BitmapW
         }
         return false;
     }
+
 }
+
